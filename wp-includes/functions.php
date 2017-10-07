@@ -1611,9 +1611,6 @@ function wp_mkdir_p( $target ) {
 	// We need to find the permissions of the parent folder that exists and inherit that.
 	$target_parent = dirname( $target );
 	while ( '.' != $target_parent && ! is_dir( $target_parent ) ) {
-		if ( dirname($target_parent) == $target_parent ) {
-			return false;
-		}
 		$target_parent = dirname( $target_parent );
 	}
 
