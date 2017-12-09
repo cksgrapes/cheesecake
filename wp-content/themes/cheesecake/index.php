@@ -3,6 +3,15 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
+    <div class="post">
+        <a href="<?php the_permalink(); ?>">
+            <h2><?php the_title(); ?></h2>
+            <div class="post_body">
+                <?php //echo get_the_content(); ?>
+                <?php the_excerpt(); ?>
+            </div>
+        </a>
+    </div>
 
 <?php endwhile; ?>
 
